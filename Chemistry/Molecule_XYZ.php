@@ -92,7 +92,7 @@ class Science_Chemistry_Molecule_XYZ extends Science_Chemistry_Molecule {
      *
      * @param   string  $line
      * @return  object  Science_Chemistry_Atom
-     * @acess   public
+     * @access   public
      * @see     parseXYZ()
      */
 	function parseAtom($line) {

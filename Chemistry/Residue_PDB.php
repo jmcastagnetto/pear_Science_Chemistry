@@ -37,7 +37,7 @@ class Science_Chemistry_Residue_PDB extends Science_Chemistry_Molecule {
      * PDB Residue sequence number
      *
      * @var     integer
-     * @acess   private
+     * @access   private
      */
     var $seq_num;
 

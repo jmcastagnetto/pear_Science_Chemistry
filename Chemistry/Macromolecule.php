@@ -38,7 +38,7 @@ class Science_Chemistry_Macromolecule {
      * Macromolecule's name
      *
      * @var     string
-     * @acess   private
+     * @access   private
      */
     var $name;
 

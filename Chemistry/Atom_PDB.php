@@ -45,7 +45,7 @@ class Science_Chemistry_Atom_PDB extends Science_Chemistry_Atom {
      * PDB Atom serial number
      *
      * @var     integer
-     * @acess   private
+     * @access   private
      * @see     getField()
      */
     var $ser_num;
