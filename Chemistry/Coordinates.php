@@ -78,7 +78,7 @@ class Science_Chemistry_Coordinates {
      */
     function areCoordinates($obj) {
         return  ( is_object($obj) && 
-                 (strtolower(get_class($obj)) == strtolower("Science_Chemistry_Coordinates")
+                 (strtolower(strtolower(get_class($obj))) == strtolower("Science_Chemistry_Coordinates")
                   || is_subclass_of($obj, strtolower("Science_Chemistry_Coordinates")))
                 );
     }

@@ -117,7 +117,7 @@ class Science_Chemistry_Element {
      */
     function isElement($obj) {
         return (is_object($obj) &&
-                (get_class($obj) == "Science_Chemistry_Element" ||
+                (strtolower(get_class($obj)) == "Science_Chemistry_Element" ||
                  is_subclass_of($obj, "Science_Chemistry_Element"))
                );
     }

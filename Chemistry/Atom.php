@@ -133,7 +133,7 @@ class Science_Chemistry_Atom {
      */
     function isAtom($obj) {
         return  (is_object($obj) && 
-                 (strtolower(get_class($obj)) == strtolower("Science_Chemistry_Atom")
+                 (strtolower(strtolower(get_class($obj))) == strtolower("Science_Chemistry_Atom")
                   || is_subclass_of($obj, strtolower("Science_Chemistry_Atom")))
                 );
     }
