@@ -3,6 +3,11 @@
 <package version="1.0">
   <name>Science_Chemistry</name>
   <summary>Classes to manipulated chemical objects: atoms, molecules, etc.</summary>
+  <description>
+	General classes to represent Atoms, Molecules and Macromolecules.  Also
+	parsing code for PDB, CML and XYZ file formats.  Examples of parsing and
+	conversion to/from chemical structure formats 
+  </description>
   <maintainers>
     <maintainer>
       <user>jmcastagnetto</user>
@@ -11,15 +16,17 @@
 	  <role>lead</role>
     </maintainer>
   </maintainers>
+  <license>PHP License</license>
   <release>
     <version>1.0</version>
-    <date>2001-04-10</date>
+    <date>2002-04-22</date>
     <notes>
      This is the initial release of the classes after conversion to PEAR
      standards. 
      Includes tests/examples of use and PHPDoc generated documentation.
      On 2001-08-26 renamed to conform to new PEAR directory structure.
     </notes>
+	<state>stable</state>
     <filelist>
       <dir name="/">
 			<file role="php">Chemistry.php</file>
