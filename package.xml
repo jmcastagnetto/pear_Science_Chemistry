@@ -3,7 +3,7 @@
   <name>Science_Chemistry</name>
   <summary>Classes to manipulated chemical objects: atoms, molecules, etc.</summary>
   <maintainer>
-    <initials>JMC</initials>
+    <user>jmcastagnetto</user>
     <name>Jesus M. Castagnetto</name>
     <email>jmcastagnetto@php.net</email>
   </maintainer>
@@ -11,7 +11,7 @@
     <version>1.0</version>
     <date>2001-04-10</date>
     <notes>
-    	This is the initial release of the classes after conversion to PEAR
+     This is the initial release of the classes after conversion to PEAR
      standards. 
      Includes tests/examples of use and PHPDoc generated documentation.
      On 2001-08-26 renamed to conform to new PEAR directory structure.
