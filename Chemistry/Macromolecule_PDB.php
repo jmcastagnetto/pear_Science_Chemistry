@@ -58,27 +58,24 @@ class Science_Chemistry_Macromolecule_PDB extends Science_Chemistry_Macromolecul
      * @see     Science_Chemistry_Macromolecule_PDB()
      */
 	function parseResidues($records) {
-        $curr_res_id = "";
+        $curr_res_id = '';
         $res_atoms = array();
-        for ($i=0; $i< count($records); $i++) {
-            $atomrec =& $records[$i];
+        $nrecs = count($records);
+        for ($i=0; $i< $nrecs; $i++) {
+            $atomrec = $records[$i];
             $res_name = trim(substr($atomrec,17,3));
             $chain = trim(substr($atomrec,21,1));
             $seq_num = (int) trim(substr($atomrec,22,4));
             $res_id = $res_name.":".$seq_num.":".$chain;
-
-            if ($res_id == $curr_res_id) {
-                $res_atoms[] = $atomrec;
-            } else {
-                if (!empty($res_atoms)) {
-                    $this->molecules[] = new Science_Chemistry_Residue_PDB(&$this->pdb, 
-                                            &$res_atoms, &$this);
-                    $this->num_molecules++;
-                }
-                $curr_res_id = $res_id;
-                $res_atoms = array($atomrec);
-            }
+            $res_atoms[$res_id][] = $atomrec;
         }
+
+         foreach ($res_atoms as $mol_id => $atoms_list) {
+            $this->molecules[] =& new Science_Chemistry_Residue_PDB(&$this->pdb, 
+                                            &$atoms_list, &$this);
+            $this->num_molecules++;
+        }
+        return true;
 	}
 } // end of Science_Chemistry_Macromolecule_PDB
 

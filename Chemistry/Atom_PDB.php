@@ -182,7 +182,8 @@ class Science_Chemistry_Atom_PDB extends Science_Chemistry_Atom {
         $z = (double) trim(substr($atomrec,46,8));
         $this->xyz = new Science_Chemistry_Coordinates(array($x, $y, $z));
         $element = trim(substr($atomrec,76,2));
-        $this->element = $element;
+        // if no element is present, use the atom_name
+        $this->element = (preg_match('/^[A-Z]{1,2}/', $element)) ? $element : $this->atom_name;
     }
 
     function getField($field) {
