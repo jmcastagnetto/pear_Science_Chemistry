@@ -1,98 +1,98 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
-<Package>
-  <Name>Science_Chemistry</Name>
-  <Summary>Classes to manipulated chemical objects: atoms, molecules, etc.</Summary>
-  <Maintainer>
-    <Initials>JMC</Initials>
-    <Name>Jesus M. Castagnetto</Name>
-    <Email>jmcastagnetto@php.net</Email>
-  </Maintainer>
-  <Release>
-    <Version>1.0</Version>
-    <Date>2001-04-10</Date>
-    <Notes>
+<package>
+  <name>Science_Chemistry</name>
+  <summary>Classes to manipulated chemical objects: atoms, molecules, etc.</summary>
+  <maintainer>
+    <initials>JMC</initials>
+    <name>Jesus M. Castagnetto</name>
+    <email>jmcastagnetto@php.net</email>
+  </maintainer>
+  <release>
+    <version>1.0</version>
+    <date>2001-04-10</date>
+    <notes>
     	This is the initial release of the classes after conversion to PEAR
      standards. 
      Includes tests/examples of use and PHPDoc generated documentation.
      On 2001-08-26 renamed to conform to new PEAR directory structure.
-    </Notes>
-  </Release>
-  <FileList>
-    <Dir name="/">
-     <File Role="php">Chemistry.php</File>
-     <File Role="doc">README</File>
-     <File Role="doc">TODO</File>
-     <Dir name="Chemistry">
-      <File Role="php">Atom_PDB.php</File>
-      <File Role="php">Atom.php</File>
-      <File Role="php">Coordinates.php</File>
-      <File Role="php">Element.php</File>
-      <File Role="php">Macromolecule_PDB.php</File>
-      <File Role="php">Macromolecule.php</File>
-      <File Role="php">Molecule.php</File>
-      <File Role="php">Molecule_XYZ.php</File>
-      <File Role="php">PDBFile.php</File>
-      <File Role="php">PDBParser.php</File>
-      <File Role="php">Periodic_Table.php</File>
-      <File Role="php">Residue_PDB.php</File>
-      <Dir name="doc">
-       <File Role="doc">class_Science_Chemistry_Atom_PDB.xml</File>
-       <File Role="doc">class_Science_Chemistry_Atom.xml</File>
-       <File Role="doc">class_Science_Chemistry_Coordinates.xml</File>
-       <File Role="doc">class_Science_Chemistry_Element.xml</File>
-       <File Role="doc">class_Science_Chemistry_Macromolecule_PDB.xml</File>
-       <File Role="doc">class_Science_Chemistry_Macromolecule.xml</File>
-       <File Role="doc">class_Science_Chemistry_Molecule.xml</File>
-       <File Role="doc">class_Science_Chemistry_Molecule_XYZ.xml</File>
-       <File Role="doc">class_Science_Chemistry_PDBFile.xml</File>
-       <File Role="doc">class_Science_Chemistry_PDBParser.xml</File>
-       <File Role="doc">class_Science_Chemistry_Periodic_Table.xml</File>
-       <File Role="doc">class_Science_Chemistry_Residue_PDB.xml</File>
-       <File Role="doc">classtree_Science_Chemistry_Atom.xml</File>
-       <File Role="doc">classtree_Science_Chemistry_Coordinates.xml</File>
-       <File Role="doc">classtree_Science_Chemistry_Element.xml</File>
-       <File Role="doc">classtree_Science_Chemistry_Macromolecule.xml</File>
-       <File Role="doc">classtree_Science_Chemistry_Molecule.xml</File>
-       <File Role="doc">classtree_Science_Chemistry_PDBFile.xml</File>
-       <File Role="doc">classtree_Science_Chemistry_PDBParser.xml</File>
-       <File Role="doc">classtree_Science_Chemistry_Periodic_Table.xml</File>
-       <File Role="doc">elementlist.xml</File>
-       <File Role="doc">frame_packagelist.html</File>
-       <File Role="doc">packageelementlist_Science_Chemistry.html</File>
-       <File Role="doc">packagelist.xml</File>
-       <File Role="doc">phpdoc_classtree.html</File>
-       <File Role="doc">phpdoc_elementlist.html</File>
-       <File Role="doc">phpdoc_packagelist.html</File>
-       <File Role="doc">phpdoc_warnings.html</File>
-       <File Role="doc">phpdoc_xmlfiles.html</File>
-       <File Role="doc">Science_Chemistry_Atom.html</File>
-       <File Role="doc">Science_Chemistry_Atom_PDB.html</File>
-       <File Role="doc">Science_Chemistry_Coordinates.html</File>
-       <File Role="doc">Science_Chemistry_Element.html</File>
-       <File Role="doc">Science_Chemistry_Macromolecule.html</File>
-       <File Role="doc">Science_Chemistry_Macromolecule_PDB.html</File>
-       <File Role="doc">Science_Chemistry_Molecule.html</File>
-       <File Role="doc">Science_Chemistry_Molecule_XYZ.html</File>
-       <File Role="doc">Science_Chemistry_PDBFile.html</File>
-       <File Role="doc">Science_Chemistry_PDBParser.html</File>
-       <File Role="doc">Science_Chemistry_Periodic_Table.html</File>
-       <File Role="doc">Science_Chemistry_Residue_PDB.html</File>
-       <File Role="doc">warnings_classanalyser.xml</File>
-       <File Role="doc">warnings_parser.xml</File>
-      </Dir>
-      <Dir name="test">
-       <File Role="php">testChem.php</File>
-       <File Role="php">testPDB.php</File>
-       <File Role="php">xyz2cml.php</File>
-       <File Role="data">1hca.pdb</File>
-       <File Role="data">his.pdb</File>
-       <File Role="data">his.xyz</File>
-       <File Role="data">lys.pdb</File>
-       <File Role="data">lys.xyz</File>
-       <File Role="data">small.pdb</File>
-       <File Role="data">water.cml</File>
-      </Dir>
-     </Dir>
-    </Dir>
-  </FileList>
-</Package>
+    </notes>
+  </release>
+  <filelist>
+    <dir name="/">
+     <file role="php">Chemistry.php</file>
+     <file role="doc">README</file>
+     <file role="doc">TODO</file>
+     <dir name="Chemistry">
+      <file role="php">Atom_PDB.php</file>
+      <file role="php">Atom.php</file>
+      <file role="php">Coordinates.php</file>
+      <file role="php">Element.php</file>
+      <file role="php">Macromolecule_PDB.php</file>
+      <file role="php">Macromolecule.php</file>
+      <file role="php">Molecule.php</file>
+      <file role="php">Molecule_XYZ.php</file>
+      <file role="php">PDBFile.php</file>
+      <file role="php">PDBParser.php</file>
+      <file role="php">Periodic_Table.php</file>
+      <file role="php">Residue_PDB.php</file>
+      <dir name="doc">
+       <file role="doc">class_Science_Chemistry_Atom_PDB.xml</file>
+       <file role="doc">class_Science_Chemistry_Atom.xml</file>
+       <file role="doc">class_Science_Chemistry_Coordinates.xml</file>
+       <file role="doc">class_Science_Chemistry_Element.xml</file>
+       <file role="doc">class_Science_Chemistry_Macromolecule_PDB.xml</file>
+       <file role="doc">class_Science_Chemistry_Macromolecule.xml</file>
+       <file role="doc">class_Science_Chemistry_Molecule.xml</file>
+       <file role="doc">class_Science_Chemistry_Molecule_XYZ.xml</file>
+       <file role="doc">class_Science_Chemistry_PDBFile.xml</file>
+       <file role="doc">class_Science_Chemistry_PDBParser.xml</file>
+       <file role="doc">class_Science_Chemistry_Periodic_Table.xml</file>
+       <file role="doc">class_Science_Chemistry_Residue_PDB.xml</file>
+       <file role="doc">classtree_Science_Chemistry_Atom.xml</file>
+       <file role="doc">classtree_Science_Chemistry_Coordinates.xml</file>
+       <file role="doc">classtree_Science_Chemistry_Element.xml</file>
+       <file role="doc">classtree_Science_Chemistry_Macromolecule.xml</file>
+       <file role="doc">classtree_Science_Chemistry_Molecule.xml</file>
+       <file role="doc">classtree_Science_Chemistry_PDBFile.xml</file>
+       <file role="doc">classtree_Science_Chemistry_PDBParser.xml</file>
+       <file role="doc">classtree_Science_Chemistry_Periodic_Table.xml</file>
+       <file role="doc">elementlist.xml</file>
+       <file role="doc">frame_packagelist.html</file>
+       <file role="doc">packageelementlist_Science_Chemistry.html</file>
+       <file role="doc">packagelist.xml</file>
+       <file role="doc">phpdoc_classtree.html</file>
+       <file role="doc">phpdoc_elementlist.html</file>
+       <file role="doc">phpdoc_packagelist.html</file>
+       <file role="doc">phpdoc_warnings.html</file>
+       <file role="doc">phpdoc_xmlfiles.html</file>
+       <file role="doc">Science_Chemistry_Atom.html</file>
+       <file role="doc">Science_Chemistry_Atom_PDB.html</file>
+       <file role="doc">Science_Chemistry_Coordinates.html</file>
+       <file role="doc">Science_Chemistry_Element.html</file>
+       <file role="doc">Science_Chemistry_Macromolecule.html</file>
+       <file role="doc">Science_Chemistry_Macromolecule_PDB.html</file>
+       <file role="doc">Science_Chemistry_Molecule.html</file>
+       <file role="doc">Science_Chemistry_Molecule_XYZ.html</file>
+       <file role="doc">Science_Chemistry_PDBFile.html</file>
+       <file role="doc">Science_Chemistry_PDBParser.html</file>
+       <file role="doc">Science_Chemistry_Periodic_Table.html</file>
+       <file role="doc">Science_Chemistry_Residue_PDB.html</file>
+       <file role="doc">warnings_classanalyser.xml</file>
+       <file role="doc">warnings_parser.xml</file>
+      </dir>
+      <dir name="test">
+       <file role="php">testChem.php</file>
+       <file role="php">testPDB.php</file>
+       <file role="php">xyz2cml.php</file>
+       <file role="data">1hca.pdb</file>
+       <file role="data">his.pdb</file>
+       <file role="data">his.xyz</file>
+       <file role="data">lys.pdb</file>
+       <file role="data">lys.xyz</file>
+       <file role="data">small.pdb</file>
+       <file role="data">water.cml</file>
+      </dir>
+     </dir>
+    </dir>
+  </filelist>
+</package>
