@@ -36,7 +36,7 @@ class Science_Chemistry_PDBFile {
      * PDB ID
      *
      * @var     string
-     * @acess   private
+     * @access   private
      */
     var $pdb;
 
