@@ -18,10 +18,11 @@
   </maintainers>
   <license>PHP License</license>
   <release>
-    <version>1.0.2</version>
-    <date>2002-04-23</date>
+    <version>1.0.3</version>
+    <date>2002-07-30</date>
     <notes>
-	  Fixed package.xml to be able to install the test scripts
+	  Change calls to "new Element()" to the current 
+	  "new Science_Chemistry_Element()"
     </notes>
     <state>stable</state>
     <filelist>
@@ -104,6 +105,21 @@
     </filelist>
   </release>
   <changelog>
+    <release>
+      <version>1.0.3</version>
+      <date>2002-07-30</date>
+      <notes>
+	    Change calls to "new Element()" to the current 
+		"new Science_Chemistry_Element()"
+      </notes>
+    </release>
+    <release>
+      <version>1.0.2</version>
+      <date>2002-04-23</date>
+      <notes>
+	    Fixed package.xml to be able to install the test scripts
+      </notes>
+    </release>
 	<release>
       <version>1.0.1</version>
       <date>2002-04-23</date>
