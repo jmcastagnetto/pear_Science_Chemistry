@@ -177,7 +177,7 @@ class Science_Chemistry_Molecule {
      */
     function isMolecule($obj) {
         return  (is_object($obj) && 
-                 (strtolower(get_class($obj)) == strtolower("Science_Chemistry_Molecule") ||
+                 (strtolower(strtolower(get_class($obj))) == strtolower("Science_Chemistry_Molecule") ||
                   is_subclass_of($obj, strtolower("Science_Chemistry_Molecule")))
                 );
     }

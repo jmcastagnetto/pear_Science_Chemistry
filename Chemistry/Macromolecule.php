@@ -134,7 +134,7 @@ class Science_Chemistry_Macromolecule {
      */
     function isMacromolecule($obj) {
         return  (is_object($obj) && 
-                 (strtolower(get_class($obj)) == strtolower("Science_Chemistry_Macromolecule") ||
+                 (strtolower(strtolower(get_class($obj))) == strtolower("Science_Chemistry_Macromolecule") ||
                   is_subclass_of($obj, strtolower("Science_Chemistry_Macromolecule")))
                 );
     }
