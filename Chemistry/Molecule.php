@@ -183,13 +183,25 @@ class Science_Chemistry_Molecule {
     }
 
     /**
-     * Returns a string representation of the molecule
-     * as a XYZ-format file
+     * Returns a string representation of the molecule  as a XYZ-format file
+     * Alias of toXYZ()
      *
      * @return  string
      * @access  public
+     * @see toXYZ()
      */
     function toString() {
+        return $this->toXYZ();
+    }
+
+    /**
+     * Returns a string representation of the molecule  as a XYZ-format file
+     *
+     * @return  string
+     * @access  public
+     * @see toString()
+     */
+    function toXYZ() {
         if (!$this->atoms)
             return false;
         $out[] = $this->num_atoms;
@@ -308,7 +320,7 @@ class Science_Chemistry_Molecule {
             if(!$this->calcDistanceMatrix())
                 return false;
         $dmat = &$this->dist_matrix;
-        echo "Atom-Atom Distance Matrix:\n";
+        echo "# Atom-Atom Distance Matrix:\n";
         for ($i=0; $i < $this->num_atoms; $i++)
             echo "\t".($i+1);
         for ($i=0; $i < $this->num_atoms; $i++) {
@@ -364,7 +376,7 @@ class Science_Chemistry_Molecule {
         if (empty($this->conn_table))
             if (!$this->calcConnectionTable())
                 return false;
-        printf("Connection Table: (cutoff = %.4f Angstroms)\n", $this->BONDCUTOFF);
+        printf("# Connection Table: (cutoff = %.4f Angstroms)\n", $this->BONDCUTOFF);
         for ($i=0; $i < $this->num_atoms; $i++)
             for ($j=($i+1); $j < $this->num_atoms; $j++)
                 if ($this->conn_table[$i][$j]) {

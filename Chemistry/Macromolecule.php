@@ -146,12 +146,26 @@ class Science_Chemistry_Macromolecule {
      *
      * @return  string
      * @access  public
+     * @see toString()
      */
-    function toString() {
+    function toXYZ() {
         $out = "# Number of molecules: ".$this->num_molecules."\n";
         for ($i=0; $i < $this->num_molecules; $i++)
             $out .= "# Molecule ".($i+1)."\n".$this->molecules[$i]->toString()."\n";
         return $out;
+    }
+
+    /**
+     * Returns a string representation of the macromolecule
+     * as a multiple molecule XYZ-format file
+     * Alias of toXYZ()
+     *
+     * @return  string
+     * @access  public
+     * @see toString()
+     */
+    function toString() {
+        return $this->toXYZ();
     }
 
     /**

@@ -98,13 +98,13 @@ class Science_Chemistry_PDBFile {
      * @see     $file
      * @see     mkArrays()
      */
-    function Science_Chemistry_PDBFile($filename) {
+    function Science_Chemistry_PDBFile($filename, $usemeta=false) {
         if (!file_exists($filename))
             return null;
         list($pdb,) = explode(".",basename($filename));
         $this->pdb = $pdb;
         $this->file = realpath($filename);
-        $this->parseFile(file($filename));
+        $this->parseFile(file($filename), $usemeta);
     }
 
     /**
@@ -114,7 +114,7 @@ class Science_Chemistry_PDBFile {
      * @access  private
      * @see     Science_Chemistry_Macromolecule_PDB()
      */
-	function parseFile($arr) {
+	function parseFile($arr, $usemeta) {
         $month = array (
                 "JAN" => "01", "FEB" => "02", "MAR" => "03",
                 "APR" => "04", "MAY" => "05", "JUN" => "06",
@@ -150,7 +150,11 @@ class Science_Chemistry_PDBFile {
 
             // create the meta array and accumulate the atom records
             if ($rectype != "ATOM" && $rectype != "HETATM") {
-                //$this->meta[$rectype][] = trim($arr[$i]);
+                if ($usemeta) {
+                    $this->meta[$rectype][] = trim($arr[$i]);
+                } else {
+                    continue;
+                }
             } else {
                 $tmparr[] = $arr[$i];
             }

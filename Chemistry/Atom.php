@@ -140,11 +140,24 @@ class Science_Chemistry_Atom {
 
     /**
      * Returns a string representation of the Science_Chemistry_Atom object
+     * Alias of toXYZ()
      *
      * @return  string
      * @access  public
+     * @see toXYZ()
      */
     function toString() {
+        return $this->toXYZ();
+    }
+
+    /**
+     * Returns a XYZ representation of the Science_Chemistry_Atom object
+     *
+     * @return  string
+     * @access  public
+     * @see toString()
+     */
+    function toXYZ() {
         if ($this->element && $this->xyz)
             return sprintf("%2s",$this->element)." ".$this->xyz->toString();
     }
