@@ -2,11 +2,12 @@
 <!DOCTYPE package SYSTEM "../package.dtd">
 <package version="1.0">
   <name>Science_Chemistry</name>
-  <summary>Classes to manipulated chemical objects: atoms, molecules, etc.</summary>
+  <summary>Classes to manipulate chemical objects: atoms, molecules, etc.</summary>
   <description>
   General classes to represent Atoms, Molecules and Macromolecules.  Also
   parsing code for PDB, CML and XYZ file formats.  Examples of parsing and
-  conversion to/from chemical structure formats 
+  conversion to/from chemical structure formats. Includes a utility class with
+  information on the Elements in the Periodic Table.
   </description>
   <maintainers>
     <maintainer>
@@ -18,11 +19,12 @@
   </maintainers>
   <license>PHP License</license>
   <release>
-    <version>1.0.3</version>
-    <date>2002-07-30</date>
+   <version>1.1.0</version>
+    <date>2003-05-12</date>
     <notes>
-	  Change calls to "new Element()" to the current 
-	  "new Science_Chemistry_Element()"
+    Modified the parsing algorithm for atom records in a residue
+    Added toXYZ() methods, and made toString() aliases of those
+    Added one more example for converting PDB to XYZ
     </notes>
     <state>stable</state>
     <filelist>
@@ -47,6 +49,7 @@
           <file role="php">testChem.php</file>
           <file role="php">testPDB.php</file>
           <file role="php">xyz2cml.php</file>
+          <file role="php">pdb2xyz.php</file>
           <file role="data">1hca.pdb</file>
           <file role="data">his.pdb</file>
           <file role="data">his.xyz</file>
@@ -60,29 +63,38 @@
     </filelist>
   </release>
   <changelog>
+  <release>
+   <version>1.1.0</version>
+    <date>2003-05-12</date>
+    <notes>
+    Modified the parsing algorithm for atom records in a residue
+    Added toXYZ() methods, and made toString() aliases of those
+    Added one more example for converting PDB to XYZ
+    </notes>
+  </release>
     <release>
       <version>1.0.3</version>
       <date>2002-07-30</date>
       <notes>
-	    Change calls to "new Element()" to the current 
-		"new Science_Chemistry_Element()"
+     Change calls to "new Element()" to the current 
+  "new Science_Chemistry_Element()"
       </notes>
     </release>
     <release>
       <version>1.0.2</version>
       <date>2002-04-23</date>
       <notes>
-	    Fixed package.xml to be able to install the test scripts
+     Fixed package.xml to be able to install the test scripts
       </notes>
     </release>
-	<release>
+ <release>
       <version>1.0.1</version>
       <date>2002-04-23</date>
       <notes>
-	    Fixed an install problem. It should now install properly on
-	    $PEAR/Science/Chemistry
+     Fixed an install problem. It should now install properly on
+     $PEAR/Science/Chemistry
       </notes>
-	</release>
+ </release>
     <release>
     <version>1.0</version>
     <date>2002-04-22</date>
