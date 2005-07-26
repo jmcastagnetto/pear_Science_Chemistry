@@ -48,7 +48,7 @@ class Science_Chemistry_Periodic_Table {
      */
     function getElement($symbol) {
         if (empty($this->periodic_table))
-            initTable();
+            $this->initTable();
         $elem = $this->periodic_table[$symbol];
         if (Science_Chemistry_Element::isElement($elem))
             return $elem;
@@ -65,7 +65,7 @@ class Science_Chemistry_Periodic_Table {
      */
     function getElementFamily($family) {
         if (empty($this->periodic_table))
-            initTable();
+            $this->initTable();
         $elemlist = array();
         foreach ($this->periodic_table as $sym=>$elem)
             if ($elem->family == $family)
