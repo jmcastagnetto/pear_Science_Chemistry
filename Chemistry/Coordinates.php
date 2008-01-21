@@ -54,7 +54,7 @@ class Science_Chemistry_Coordinates {
     }
     
     /**
-     * Castesian distance calculation method
+     * Cartesian distance calculation method
      *
      * @param   object  Science_Chemistry_Coordinates $coord
      * @return  float   distance
@@ -63,8 +63,10 @@ class Science_Chemistry_Coordinates {
     function distance($coord) {
         if (Science_Chemistry_Coordinates::areCoordinates($coord)) {
             $xyz2 = $coord->getCoordinates();
-            for ($i=0; $i<count($xyz2); $i++)
+            $sum2 = 0;
+            for ($i=0; $i<count($xyz2); $i++) {
                 $sum2 += pow(($xyz2[$i] - $this->coords[$i]),2);
+            }
             return sqrt($sum2);
         }
     }

@@ -24,7 +24,7 @@ require_once "PEAR.php";
 /**
  * Package version constant
  */
-define (SCIENCE_CHEMISTRY_VERSION, 1.0);
+define (SCIENCE_CHEMISTRY_VERSION, '1.0');
 
 require_once "Science/Chemistry/Element.php";
 require_once "Science/Chemistry/Periodic_Table.php";
