@@ -63,7 +63,7 @@ class Science_Chemistry_Atom {
      * @see     setCoordinates()
      */
     function Science_Chemistry_Atom($element, $coords="") {
-        if ($element && ereg("[[:alpha:]]{1,2}", $element))
+        if ($element && preg_match("/[[:alpha:]]{1,2}/", $element))
             $this->element = $element;
         else
             return null;

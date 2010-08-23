@@ -77,11 +77,11 @@ class Science_Chemistry_Molecule_XYZ extends Science_Chemistry_Molecule {
 		// first line is number of atoms
 		$this->num_atoms = trim($line[0]);
 		// second line is molecule name and energy
-		ereg("^([[:alnum:].]+)[[:space:]]+([[:digit:].-]+)",trim($line[1]),&$re);
+		preg_match("/^([[:alnum:].]+)[[:space:]]+([[:digit:].-]+)/",trim($line[1]),&$re);
 		$this->name = trim($re[1]);
 		$this->energy = trim($re[2]);
 		for ($i=2; $i<count($line); $i++) {
-			if (!ereg("^#",$line[$i]) && !ereg("^$", $line[$i])) {
+			if (!preg_match("/^#/",$line[$i]) && !preg_match("/^$/", $line[$i])) {
 				$this->atoms[] = $this->parseAtom($line[$i]);
 			}
 		}
@@ -96,7 +96,7 @@ class Science_Chemistry_Molecule_XYZ extends Science_Chemistry_Molecule {
      * @see     parseXYZ()
      */
 	function parseAtom($line) {
-		list($element, $x, $y, $z) = split("[\t ]+",trim($line));
+		list($element, $x, $y, $z) = preg_split("/[\t ]+/",trim($line));
 		return new Science_Chemistry_Atom($element, array($x, $y, $z));
 	}
 
