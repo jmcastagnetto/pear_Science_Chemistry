@@ -88,11 +88,16 @@ class Science_Chemistry_Macromolecule {
      * @see     addMolecule()
      */
     function initMacromolecule($molecules) {
-        if (!is_array)
+        if (!is_array($molecules)) {
             return false;
-        for ($i=0; $i < count($molecules); $i++)
-            if(!$this->addMolecule($molecules[$i]))
+        }
+
+        for ($i=0; $i < count($molecules); $i++) {
+            if (!$this->addMolecule($molecules[$i])) {
                 return false;
+            }
+        }
+
         return true;
     }
 
